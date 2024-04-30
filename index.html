@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serotonin</title>
+    <title>Dopamine</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="dopaminelogo.png" alt="Dopamine Logo" id="logo"/>
-    <div class="button-container">
-        <button id="manualMode">DIY Dopamine</button>
-        <button id="automaticMode">Automatic Dopamine</button>
-    </div>
-    <div id="counter-container">
-        <p>Dopamine Hits: <span id="soundCounter">0</span></p>
-    </div>
+    <header>
+        <img src="dopaminelogo.png" alt="Dopamine Logo" id="logo"/>
+        <nav>
+            <a href="#" id="about-link"></a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="button-container">
+            <div class="button-section" id="manual-mode">
+                <button id="manualMode">DIY Dopamine</button>
+                <p class="button-description">Find yourself constantly the dopamine high you get when you hear the sweet sound of a LinkedIn notification? I sure do.</p>
+            </div>
+            <div class="button-section" id="automatic-mode">
+                <button id="automaticMode">Automatic Dopamine</button>
+                <p class="button-description">Look no further than DopamIne. Try the DIY version to get satisfaction on demand.<br><br>Or set it to automatic and get an organic notification sound randomly every minute.</p>
+                <div id="counter-container">
+                    <p>Dopamine Hits: <span id="soundCounter">0</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>

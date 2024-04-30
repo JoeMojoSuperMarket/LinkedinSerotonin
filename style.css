@@ -1,115 +1,156 @@
 /* General reset and setup */
 * {
-    box-sizing: border-box; /* Apply box-sizing to all elements */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
     height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Prevents scroll bars */
-}
-
-/* Apply a global font and background color */
-body {
-    font-family: 'Myriad Pro', Arial, sans-serif;
+    overflow: hidden;
     background-color: #fbf9f3;
-    padding: 2%; /* Adds padding inside the body, affects the overall width and height */
+    font-family: 'GT America', Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    position: relative; /* Positioning context for children */
-}
-
-/* Create a pseudo-element for the border to avoid issues with box-sizing */
-body::before {
-    content: '';
-    position: absolute;
-    top: 2%; left: 2%; /* Positioning */
-    right: 2%; bottom: 2%; /* Positioning */
-    border: 2px solid #4c98ff; /* Thin blue border */
-    border-radius: 20px; /* Rounded corners */
-    pointer-events: none; /* Allows clicking through to elements below */
-    z-index: 0; /* Ensure it's behind content but above background */
-}
-
-/* Style for the logo */
-#logo {
-    position: absolute;
-    top: 2%; /* Space from the top */
-    left: 2%; /* Space from the left */
-    width: 350px; /* Adjust as needed */
-    height: auto;
-    z-index: 10; /* Above the pseudo-element border */
-}
-
-/* Adjustments for the button container */
-.button-container {
-    z-index: 10; /* Above the pseudo-element border */
-    display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 20px;
-    flex-wrap: nowrap;
+    justify-content: center;
 }
 
-/* Style for buttons */
-button {
-    font-size: 1em;
-    padding: 20px; /* Equal padding */
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #4c98ff;
-    color: white;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.3s;
+header {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 64px; /* Fixed height for equal size */
-    min-width: 200px; /* Minimum width */
+    padding: 1rem 2%;
     box-sizing: border-box;
-}
-
-/* Hover effect for buttons */
-button:hover, button:focus {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-}
-
-/* Counter container styling */
-#counter-container {
-    position: absolute;
-    bottom: 2%; /* Adjust as needed */
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 1em;
+    position: fixed;
+    top: 0;
     z-index: 10;
 }
 
-/* Media queries for responsiveness */
+#logo {
+    width: auto;
+    height: 120px; /* Adjust the height as needed */
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    padding: 5rem 2% 2% 2%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.call-to-action {
+    font-size: 2em;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.button-section {
+    text-align: left;
+    flex-basis: 45%;
+    margin: 0 2.5%;
+}
+
+button {
+    padding: 1em 2em;
+    border: 2px dashed #000;
+    background: none;
+    font-size: 1.5em;
+    color: #000;
+    width: 100%;
+    display: block;
+}
+
+.button-description {
+    font-size: 1em;
+    color: #000;
+    margin-top: 1.5rem;
+}
+
+#counter-container {
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+    margin-top: 2rem; /* Adjust the margin as needed */
+    width: 45%;
+}
+
+/* Media queries */
 @media (max-width: 768px) {
-    #logo {
-        top: 10px;
-        left: 10px;
-        width: 150px; /* Smaller logo */
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-section,
+    #counter-container {
+        width: 90%;
+        margin-left: 5%; /* 5% margin on each side */
     }
 
     button {
-        padding: 15px;
-        min-width: 150px; /* Adjust as needed */
-    }
-
-    #counter-container {
-        bottom: 10px;
+        padding: 1em;
     }
 }
 
-/* Highlighted button style */
-.button-highlighted {
-    background-color: #0056b3; /* Darker blue for the active button */
-    box-shadow: 0 0 10px rgba(0, 89, 179, 0.5); /* Optional: add a glow or shadow for emphasis */
+/* GT America font face declaration */
+@font-face {
+    font-family: 'GT America';
+    src: url('fonts/GT-America-Compressed-Bold.otf') format('otf'),
+         url('fonts/GT-America-Compressed-Medium.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT America';
+    src: url('fonts/GT-America-Bold.otf') format('otf'),
+    font-weight: bold;
+    font-style: normal;
+}
+
+button {
+    /* ... existing styles ... */
+    border-radius: 10px; /* Rounded corners for buttons */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    font-family: 'GT America', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.active {
+    background-color: #f5f5dc; /* Beige background for the active button */
+}
+
+button:hover, button:focus {
+    background-color: #f5f5dc; /* Beige background on hover for visibility */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Shadow for depth */
+    cursor: pointer; /* Change cursor to indicate a clickable button */
+}
+
+.active, button:hover, button:focus {
+    background-color: #f5f5dc; /* Beige background for active and hover states */
+    /* If you want the active button to have a distinct style from hover, set a different background color */
+}
+
+
+#manual-mode {
+    font-family: 'GT America', Arial, sans-serif;
+    font-weight: normal;
 }
