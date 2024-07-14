@@ -8,12 +8,12 @@
 html, body {
     height: 100%;
     overflow: hidden;
-    background-color: #fbf9f3;
-    font-family: 'GT America', Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: white; /* Single background color */
+    font-family: 'SourceSans3-VariableFont_wght.ttf', SourceSans3-VariableFont_wght, sans-serif;
 }
 
 header {
@@ -29,8 +29,8 @@ header {
 }
 
 #logo {
+    height: 120px;
     width: auto;
-    height: 120px; /* Adjust the height as needed */
 }
 
 nav a {
@@ -40,117 +40,71 @@ nav a {
 }
 
 main {
+    padding: 140px 2% 2%;
     width: 100%;
     max-width: 1200px;
-    padding: 5rem 2% 2% 2%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
-}
-
-.call-to-action {
-    font-size: 2em;
-    margin-bottom: 2rem;
-    color: #000;
 }
 
 .button-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .button-section {
-    text-align: left;
-    flex-basis: 45%;
-    margin: 0 2.5%;
-}
-
-button {
-    padding: 1em 2em;
-    border: 2px dashed #000;
-    background: none;
-    font-size: 1.5em;
-    color: #000;
-    width: 100%;
-    display: block;
-}
-
-.button-description {
-    font-size: 1em;
-    color: #000;
-    margin-top: 1.5rem;
-}
-
-#counter-container {
-    text-align: left;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #000;
-    margin-top: 2rem; /* Adjust the margin as needed */
+    text-align: center;
     width: 45%;
 }
 
-/* Media queries */
+button {
+    width: 100%;
+    padding: 20px;
+    background-color: #0967c3;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 30px; /* Rounded edges */
+}
+
+button:hover, button.active {
+    background-color: #004183;
+    text-align: center;
+}
+
+.button-description {
+    font-size: 1.3em;
+    margin-bottom: 5%;
+    text-align: center;
+    width: 60vw;
+}
+
+#counter-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+}
+
 @media (max-width: 768px) {
     .button-container {
         flex-direction: column;
     }
 
-    .button-section,
+    .button-section {
+        width: 100%; /* Full width on mobile */
+        margin: 10px 0;
+    }
+
     #counter-container {
-        width: 90%;
-        margin-left: 5%; /* 5% margin on each side */
+        position: static;
+        margin-top: 20px;
     }
-
-    button {
-        padding: 1em;
-    }
-}
-
-/* GT America font face declaration */
-@font-face {
-    font-family: 'GT America';
-    src: url('fonts/GT-America-Compressed-Bold.otf') format('otf'),
-         url('fonts/GT-America-Compressed-Medium.otf') format('otf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'GT America';
-    src: url('fonts/GT-America-Bold.otf') format('otf'),
-    font-weight: bold;
-    font-style: normal;
-}
-
-button {
-    /* ... existing styles ... */
-    border-radius: 10px; /* Rounded corners for buttons */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
-    font-family: 'GT America', Arial, sans-serif;
-    font-weight: bold;
-}
-
-.active {
-    background-color: #f5f5dc; /* Beige background for the active button */
-}
-
-button:hover, button:focus {
-    background-color: #f5f5dc; /* Beige background on hover for visibility */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Shadow for depth */
-    cursor: pointer; /* Change cursor to indicate a clickable button */
-}
-
-.active, button:hover, button:focus {
-    background-color: #f5f5dc; /* Beige background for active and hover states */
-    /* If you want the active button to have a distinct style from hover, set a different background color */
-}
-
-
-#manual-mode {
-    font-family: 'GT America', Arial, sans-serif;
-    font-weight: normal;
 }
