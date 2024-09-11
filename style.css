@@ -27,6 +27,24 @@ header {
     width: auto;
 }
 
+.who-made-this-link {
+    color: #0967c3;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-left: auto;
+    font-family: 'SourceSans3-VariableFont_wght.ttf', sans-serif;
+}
+
+.who-made-this-link:hover {
+    text-decoration: underline;
+    color: #004183;
+}
+
+#logo {
+    height: 60px;
+    width: auto;
+}
+
 /* Main layout */
 main {
     flex: 1;
