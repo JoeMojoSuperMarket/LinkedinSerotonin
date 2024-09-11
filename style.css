@@ -7,6 +7,7 @@
 
 html, body {
     height: 100%;
+<<<<<<< HEAD
     overflow: hidden; /* Prevent scrolling */
     display: flex;
     flex-direction: column;
@@ -16,6 +17,15 @@ html, body {
 
 h1 {
     font-family: 'bebasNeue-regular';
+=======
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* Single background color */
+    font-family: 'SourceSans3-VariableFont_wght.ttf', SourceSans3-VariableFont_wght, sans-serif;
+>>>>>>> 7eab6980faa602f053e03d162affb38f59ea688d
 }
 
 header {
@@ -27,17 +37,36 @@ header {
 }
 
 #logo {
+<<<<<<< HEAD
     height: 60px;
     width: auto;
+=======
+    height: 120px;
+    width: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+>>>>>>> 7eab6980faa602f053e03d162affb38f59ea688d
 }
 
 /* Main layout */
 main {
+<<<<<<< HEAD
     flex: 1;
+=======
+    padding: 140px 2% 2%;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+>>>>>>> 7eab6980faa602f053e03d162affb38f59ea688d
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align content to the top */
     align-items: center;
+<<<<<<< HEAD
     text-align: center;
     position: relative;
 }
@@ -109,10 +138,36 @@ button span {
     display: block;
     max-width: 75%; /* Max width of the description inside the button */
     text-align: center;
+=======
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button-section {
+    text-align: center;
+    width: 45%;
+}
+
+button {
+    width: 100%;
+    padding: 20px;
+    background-color: #0967c3;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 30px; /* Rounded edges */
+>>>>>>> 7eab6980faa602f053e03d162affb38f59ea688d
 }
 
 button:hover, button.active {
     background-color: #004183;
+<<<<<<< HEAD
 }
 
 /* Responsive design for mobile */
@@ -147,5 +202,39 @@ button:hover, button.active {
     /* Counter position */
     #counter-container {
         bottom: 10px; /* Keep the counter at the bottom of the screen */
+=======
+    text-align: center;
+}
+
+.button-description {
+    font-size: 1.3em;
+    margin-bottom: 5%;
+    text-align: center;
+    width: 60vw;
+}
+
+#counter-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-section {
+        width: 100%; /* Full width on mobile */
+        margin: 10px 0;
+    }
+
+    #counter-container {
+        position: static;
+        margin-top: 20px;
+>>>>>>> 7eab6980faa602f053e03d162affb38f59ea688d
     }
 }
