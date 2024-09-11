@@ -1,4 +1,3 @@
-
 // Initialize sound play counter
 let soundPlayCount = 0;
 
@@ -6,6 +5,9 @@ let soundPlayCount = 0;
 function updateSoundCounter() {
     const counterDisplay = document.getElementById('soundCounter');
     counterDisplay.textContent = soundPlayCount;
+
+    // Update the browser tab title with the notification count
+    document.title = `(${soundPlayCount}) Dopamine Hits`;
 }
 
 // Function to play the sound
@@ -13,7 +15,7 @@ function playSound() {
     var audio = new Audio('click.mp3'); // Replace with the path to your audio file
     audio.play();
     soundPlayCount++; // Increment the count each time the sound is played
-    updateSoundCounter(); // Update the display
+    updateSoundCounter(); // Update the display and the tab title
 }
 
 let automaticMode = false; // State to track if automatic mode is on
@@ -29,7 +31,7 @@ function toggleActiveClass() {
 function startAutomaticMode() {
     if (intervalId) clearInterval(intervalId); // Clear any existing interval
     automaticMode = true; // Update mode state
-    intervalId = setInterval(playSound, Math.random() * (60000 - 30000) + 30000);
+    intervalId = setInterval(playSound, Math.random() * (60000 - 30000) + 30000); // Random interval between 30-60 seconds
     toggleActiveClass(); // Update button classes
 }
 
