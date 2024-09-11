@@ -52,3 +52,17 @@ automaticModeBtn.addEventListener('click', startAutomaticMode);
 // Start with the default mode and update the counter display
 manualMode();
 updateSoundCounter(); // Initialize the counter display
+
+// Script to toggle active class on buttons
+const manualButton = document.getElementById('manualMode');
+const automaticButton = document.getElementById('automaticMode');
+
+manualButton.addEventListener('click', function() {
+    manualButton.classList.add('active');
+    automaticButton.classList.remove('active');
+});
+
+automaticButton.addEventListener('click', function() {
+    automaticButton.classList.add('active');
+    manualButton.classList.remove('active');
+});
