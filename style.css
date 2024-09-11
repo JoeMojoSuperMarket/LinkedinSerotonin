@@ -7,25 +7,11 @@
 
 html, body {
     height: 100%;
-<<<<<<< HEAD
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
     font-family: 'SourceSans3-VariableFont_wght.ttf', SourceSans3-VariableFont_wght, sans-serif;
-}
-
-h1 {
-    font-family: 'bebasNeue-regular';
-=======
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white; /* Single background color */
-    font-family: 'SourceSans3-VariableFont_wght.ttf', SourceSans3-VariableFont_wght, sans-serif;
->>>>>>> 7eab6980faa602f053e03d162affb38f59ea688d
 }
 
 header {
@@ -37,52 +23,37 @@ header {
 }
 
 #logo {
-<<<<<<< HEAD
     height: 60px;
     width: auto;
-=======
-    height: 120px;
-    width: auto;
-}
-
-nav a {
-    text-decoration: none;
-    color: #000;
-    font-size: 1.2em;
->>>>>>> 7eab6980faa602f053e03d162affb38f59ea688d
 }
 
 /* Main layout */
 main {
-<<<<<<< HEAD
     flex: 1;
-=======
-    padding: 140px 2% 2%;
-    width: 100%;
-    max-width: 1200px;
-    box-sizing: border-box;
->>>>>>> 7eab6980faa602f053e03d162affb38f59ea688d
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
+    justify-content: flex-start;
     align-items: center;
-<<<<<<< HEAD
     text-align: center;
     position: relative;
+    padding: 0;
+    margin: 0;
 }
 
 /* Styling for the Header and Subhead */
 .main-header {
-    font-size: 4em;
+    font-family: "Bebas Neue";
+    font-size: 4.5em; /* Adjusted for better scaling */
     font-weight: bold;
     margin: 20px 0;
     max-width: 80vw;
-    line-height: 1em;
+    line-height: .8em;
 }
 
 .sub-header {
+    font-family: "Helvetica Neue";
     font-size: 1.2em;
-    line-height: 1em;
+    line-height: 1.2em;
     margin-bottom: 20px;
     max-width: 70vw;
 }
@@ -91,106 +62,85 @@ main {
     font-size: 1.2em;
     font-weight: bold;
     position: absolute;
-    bottom: 20px; /* Increased value to move the counter higher */
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10; /* Ensure it's above the buttons */
+    z-index: 10;
     background-color: #fff;
     padding: 5px 10px;
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    border: 2px solid black; /* 2px stroke for the counter */
+    border: 2px solid black;
 }
 
 /* Button container styling */
 .button-container {
     display: flex;
     width: 100%;
-    height: 50vh; /* Set fixed height to 50% of the viewport height */
+    height: 50vh;
     position: absolute;
-    bottom: 0; /* Ensure the button container is flush with the bottom */
+    bottom: 0;
     margin: 0;
     padding: 0;
 }
 
 .button-section {
-    width: 50%; /* Each button takes up 50% of the screen width */
+    width: 50%;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 button {
-    width: 100%; /* Buttons take full width of their section */
-    height: 100%; /* Buttons take full height of the button section */
+    width: 100%;
+    height: 100%;
     background-color: #0967c3;
     color: white;
     font-size: 1.5em;
     cursor: pointer;
     margin: 0;
-    border-radius: 0; /* Remove rounded corners */
+    border-radius: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
+    padding: 10px;
 }
 
 button span {
     display: block;
-    max-width: 75%; /* Max width of the description inside the button */
+    max-width: 80%; /* Adjust max width for better text wrapping */
     text-align: center;
-=======
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.button-section {
-    text-align: center;
-    width: 45%;
-}
-
-button {
-    width: 100%;
-    padding: 20px;
-    background-color: #0967c3;
-    border: none;
-    color: white;
-    font-size: 1.5em;
-    cursor: pointer;
-    border-radius: 30px; /* Rounded edges */
->>>>>>> 7eab6980faa602f053e03d162affb38f59ea688d
+    word-wrap: break-word;
 }
 
 button:hover, button.active {
     background-color: #004183;
-<<<<<<< HEAD
 }
 
 /* Responsive design for mobile */
 @media (max-width: 768px) {
     .button-container {
         flex-direction: column;
-        height: 50vh; /* Buttons still take up 50% of the screen height */
+        height: 50vh;
         flex-grow: 1;
-        padding-bottom: 60px; /* Add padding at the bottom to create space for the counter */
+        padding-bottom: 90px; /* Add more padding to push the buttons up and make room for the counter */
     }
 
     .button-section {
         width: 100%;
-        height: 50%; /* Buttons take 50% height of the container */
+        height: 50%;
     }
 
     button {
         margin-bottom: 0;
     }
 
-    /* Adjust font size for mobile */
     .main-header {
-        font-size: 2.5em; /* Adjusted size for mobile */
+        font-size: 1.8em; /* Reduced size for mobile */
         margin: 10px 0;
     }
 
@@ -199,42 +149,8 @@ button:hover, button.active {
         margin-bottom: 10px;
     }
 
-    /* Counter position */
-    #counter-container {
-        bottom: 10px; /* Keep the counter at the bottom of the screen */
-=======
-    text-align: center;
-}
-
-.button-description {
-    font-size: 1.3em;
-    margin-bottom: 5%;
-    text-align: center;
-    width: 60vw;
-}
-
-#counter-container {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #000;
-}
-
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: column;
-    }
-
-    .button-section {
-        width: 100%; /* Full width on mobile */
-        margin: 10px 0;
-    }
-
-    #counter-container {
-        position: static;
-        margin-top: 20px;
->>>>>>> 7eab6980faa602f053e03d162affb38f59ea688d
+    button span {
+        max-width: 80%;
+        word-wrap: break-word;
     }
 }
